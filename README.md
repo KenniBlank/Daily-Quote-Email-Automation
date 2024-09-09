@@ -1,6 +1,9 @@
 # Daily-Quote-Email-Automation
 Program written in Python which sends one random quote to think on every day.
 
+# Video Visualization
+[YouTube](https://youtu.be/41ZCntn6n98)
+
 # Prerequirements: 
 Note: **Only for linux/ mac.** Haven't used in windows
 - Open the info.txt file and replace passkey with appkey from [Passkey](https://www.zdnet.com/article/gmail-app-passwords-what-they-are-how-to-create-one-and-why-to-use-them/) for sender mail.
