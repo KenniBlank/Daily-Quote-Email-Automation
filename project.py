@@ -12,7 +12,6 @@ def main():
     subject = "Thought For The Day"
     response = model.generate_content(f"Prompt: Give me only single line output. \"{subject}\"",)
     
-    # My Code
     message = f"Subject: {subject}\n\n{response.text}"
     sender, passkey, receivers = inputFromFile("info.txt")
     msg = MIMEText(message)
@@ -57,7 +56,6 @@ def send_mail(sender_email, sender_passkey, *receiver_emails, message) -> list:
             server.login(sender_email, sender_passkey)
         except Exception as e:
             print(f"{e}\nIncorrect passkey or email. Set up correctly as instructed in the 'readme.md' file.")
-            # Return all emails as failed if login fails
             return receiver_emails 
 
         for receiver_mail in receiver_emails:
