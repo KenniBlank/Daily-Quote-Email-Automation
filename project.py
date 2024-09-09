@@ -1,13 +1,13 @@
 import smtplib
 import ssl
 import re
+from os import getenv
 import google.generativeai as genai
-import os
 from email.mime.text import MIMEText
 
 def main():
     # GEMINI GENERATION
-    genai.configure(api_key=os.environ["API_KEY"])
+    genai.configure(api_key=getenv('API_KEY'))
     model = genai.GenerativeModel('gemini-1.5-flash')
     subject = "Thought For The Day"
     response = model.generate_content(f"Prompt: Give me only single line output. \"{subject}\"",)
